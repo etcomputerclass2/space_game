@@ -17,30 +17,6 @@ pe.hideturtle()
 pe.goto(350, 300)
 pe.write("Forward-w, Right-d, Left-a, Down-s, cannot go backwards, shoot-q", align="right", font=("Courier", 16, "normal"))
 
-def loadcanvas():
-    i = -920
-    j = 940
-    while i < j:
-        bound = turtle.Turtle()
-        bound.speed(0)
-        bound.shape("square")
-        bound.color("blue")
-        bound.penup()
-        bound.goto(i,0)
-        bound.direction = "stop"
-        i += 20
-    q = -460
-    w = 480
-    while q < w:
-        bond = turtle.Turtle()
-        bond.speed(0)
-        bond.shape("square")
-        bond.color("blue")
-        bond.penup()
-        bond.goto(0,q)
-        bond.direction = "stop"
-        q += 20
-
 # Set up the screen
 wn = turtle.Screen()
 wn.title("Shooter Game by Ethan (Forked from @TokyoEdTech)")
