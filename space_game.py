@@ -235,7 +235,6 @@ wn.onkeypress(go_up, "w")
 wn.onkeypress(go_down, "s")
 wn.onkeypress(go_left, "a")
 wn.onkeypress(go_right, "d")
-wn.onkeypress(shoot, "e")
 
 
 # Main game loop
