@@ -239,10 +239,6 @@ wn.onkeypress(go_up, "Up")
 wn.onkeypress(go_down, "Down")
 wn.onkeypress(go_left, "Left")
 wn.onkeypress(go_right, "Right")
-wn.onclick(shoot)
-
-
-
 
 # Main game loop
 while True:
@@ -319,7 +315,7 @@ while True:
 
     if random.randint(5,5) == 5:
         sotd()
-    
+
     cometd()
     movecomet()
     shstard()
