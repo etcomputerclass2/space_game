@@ -15,7 +15,7 @@ pe.color("white")
 pe.penup()
 pe.hideturtle()
 pe.goto(350, 300)
-pe.write("Forward-w, Right-d, Left-a, Down-s, cannot go backwards, shoot-q", align="right", font=("Courier", 16, "normal"))
+pe.write("Forward-w, Right-d, Left-a, Down-s, cannot go backwards, shoot-space", align="right", font=("Courier", 16, "normal"))
 
 # Set up the screen
 wn = turtle.Screen()
@@ -230,11 +230,18 @@ def move():
 
 # Keyboard bindings
 wn.listen()
-wn.onkeypress(shoot, "q")
+wn.onkeypress(shoot, "space")
 wn.onkeypress(go_up, "w")
 wn.onkeypress(go_down, "s")
 wn.onkeypress(go_left, "a")
 wn.onkeypress(go_right, "d")
+wn.onkeypress(go_up, "Up")
+wn.onkeypress(go_down, "Down")
+wn.onkeypress(go_left, "Left")
+wn.onkeypress(go_right, "Right")
+wn.onclick(shoot)
+
+
 
 
 # Main game loop
