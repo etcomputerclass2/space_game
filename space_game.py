@@ -41,13 +41,13 @@ shot.penup()
 shot.goto(10000,10000)
 shot.direction = "stop"
 
-hoe = turtle.Turtle()
-hoe.speed(0)
-hoe.shape("circle")
-hoe.color("green")
-hoe.penup()
-hoe.goto(10000,10000)
-hoe.direction = "stop"
+sot = turtle.Turtle()
+sot.speed(0)
+sot.shape("circle")
+sot.color("green")
+sot.penup()
+sot.goto(10000,10000)
+sot.direction = "stop"
 
 comet = turtle.Turtle()
 comet.speed(0)
@@ -144,28 +144,28 @@ def moveshot():
         x = shot.xcor()
         shot.setx(x + 50)
 
-def hoed():
-    if hoe.xcor() > 900 or hoe.xcor() < -900 or hoe.ycor() > 450 or hoe.ycor() < -450:
-        hoe.sety(food.ycor())
-        hoe.setx(food.xcor())
-        hoe.direction = food.direction
+def sotd():
+    if sot.xcor() > 900 or sot.xcor() < -900 or sot.ycor() > 450 or sot.ycor() < -450:
+        sot.sety(food.ycor())
+        sot.setx(food.xcor())
+        sot.direction = food.direction
 
-def movehoe():
-    if hoe.direction == "up":
-        y = hoe.ycor()
-        hoe.sety(y + 50)
+def movesot():
+    if sot.direction == "up":
+        y = sot.ycor()
+        sot.sety(y + 50)
 
-    if hoe.direction == "down":
-        y = hoe.ycor()
-        hoe.sety(y - 50)
+    if sot.direction == "down":
+        y = sot.ycor()
+        sot.sety(y - 50)
 
-    if hoe.direction == "left":
-        x = hoe.xcor()
-        hoe.setx(x - 50)
+    if sot.direction == "left":
+        x = sot.xcor()
+        sot.setx(x - 50)
 
-    if hoe.direction == "right":
-        x = hoe.xcor()
-        hoe.setx(x + 50)
+    if sot.direction == "right":
+        x = sot.xcor()
+        sot.setx(x + 50)
 
 def cometd():
     if comet.xcor() > 900 or comet.xcor() < -900 or comet.ycor() > 450 or comet.ycor() < -450:
@@ -259,7 +259,7 @@ while True:
 
 
     # Check for a collision with the food
-    if head.distance(food) < 20 or head.distance(hoe) < 40 or head.distance(comet) < 40 or cmet.distance(head) < 80 or comt.distance(head) < 70 or shstar.distance(head) < 20:
+    if head.distance(food) < 20 or head.distance(sot) < 40 or head.distance(comet) < 40 or cmet.distance(head) < 80 or comt.distance(head) < 70 or shstar.distance(head) < 20:
         # Move the food to a random spot
         x = random.randint(-900, 900)
         y = random.randint(-450, 450)
@@ -312,7 +312,7 @@ while True:
             food.direction = "down"
 
     if random.randint(5,5) == 5:
-        hoed()
+        sotd()
     
     cometd()
     movecomet()
@@ -322,7 +322,7 @@ while True:
     movecomt()
     cmetd()
     movecmet()
-    movehoe()
+    movesot()
     moveshot()
     move()
 
